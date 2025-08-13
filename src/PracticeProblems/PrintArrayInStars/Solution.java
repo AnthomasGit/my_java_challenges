@@ -1,9 +1,8 @@
-import java.sql.SQLOutput;
-import java.util.EnumSet;
-import java.util.Scanner;
-import java.util.ArrayList;
+package PracticeProblems.PrintArrayInStars;
 
-public class Main {
+import java.util.Scanner;
+
+public class Solution {
 
     public static void printArrayInStars(int[] list) {
         for (int j : list) {
