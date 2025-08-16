@@ -9,7 +9,7 @@ public class Solution {
         System.out.println("Which file should have its content printed?");
         String file = reader.nextLine();
 
-        try (Scanner scanner = new Scanner(Paths.get(file))) {
+        try (Scanner scanner = new Scanner(Paths.get("src/PracticeProblems/PrintingASpecificFile/" + file))) {
 
             while (scanner.hasNextLine()) {
 
