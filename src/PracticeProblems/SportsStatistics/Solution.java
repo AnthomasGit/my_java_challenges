@@ -32,13 +32,29 @@ public class Solution {
         System.out.println("Team:");
         String team = reader.nextLine();
         int count = 0;
+        int wins = 0;
+        int losses = 0;
 
         for (Match match : lines) {
-            if ((match.homeTeam.equals(team)) || (match.visitingTeam.equals(team))) {
+            if (match.homeTeam.equals(team)) {
                 count++;
+                if (match.homeTeamPoints > match.vTeamPoints) {
+                    wins++;
+                }else {
+                    losses++;
+                }
+            } else if (match.visitingTeam.equals(team)) {
+                count++;
+                if (match.homeTeamPoints < match.vTeamPoints) {
+                    wins++;
+                }else {
+                    losses++;
+                }
             }
         }
 
         System.out.println("Games: " + count);
+        System.out.println("Wins: " + wins);
+        System.out.println("Losses: " + losses);
     }
 }
