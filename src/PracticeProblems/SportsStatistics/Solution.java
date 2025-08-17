@@ -4,12 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Solution {
-    public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+    public static void getStatistics(String file) {
         ArrayList<Match> lines = new ArrayList<>();
-
-        System.out.println("File:");
-        String file = reader.nextLine();
+        Scanner reader = new Scanner(System.in);
 
         try (Scanner scanner = new Scanner(Paths.get("src/PracticeProblems/SportsStatistics/" + file))) {
 
@@ -56,5 +53,14 @@ public class Solution {
         System.out.println("Games: " + count);
         System.out.println("Wins: " + wins);
         System.out.println("Losses: " + losses);
+    }
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.println("File:");
+        String file = reader.nextLine();
+
+        getStatistics(file);
     }
 }
